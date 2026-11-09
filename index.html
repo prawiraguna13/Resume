@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kian Tangguh Prawiraguna | IT Educator & Network Engineer</title>
+  <meta name="description" content="Portofolio Kian Tangguh Prawiraguna, S.Kom., Gr. - Guru Full-Time TJKT, MikroTik Certified Trainer (ACTR2192), dan Network Specialist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Warm Spotlight -->
+  <div class="ambient-spotlight" id="spotlight"></div>
+  <div class="ambient-vignette"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">KIAN<span class="text-accent">PRAWIRAGUNA</span></span>
+        <span class="status-badge"><span class="status-dot"></span> Full-Time Guru</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#tentang">Tentang</a>
+        <a href="#pengalaman">Pengalaman</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#sertifikat">Sertifikat</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Ganti mode gelap/terang" title="Ganti Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- macOS Glass Button (Nav CTA) -->
+        <a href="#" class="btn-macos-glass wa-link" target="_blank" rel="noopener">
+          <svg class="btn-wa-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.22C8.94 7.22 8.66 7.28 8.42 7.54C8.18 7.8 7.5 8.44 7.5 9.74C7.5 11.04 8.45 12.29 8.58 12.46C8.71 12.63 10.4 15.39 13.09 16.44C15.32 17.31 15.78 17.14 16.26 17.09C16.74 17.05 17.81 16.46 18.03 15.84C18.25 15.22 18.25 14.69 18.19 14.58C18.13 14.47 17.96 14.41 17.7 14.28C17.44 14.15 16.17 13.52 15.93 13.43C15.69 13.34 15.52 13.3 15.35 13.56C15.18 13.82 14.69 14.41 14.54 14.58C14.39 14.75 14.24 14.77 13.98 14.64C13.72 14.51 12.89 14.24 11.9 13.36C11.13 12.67 10.61 11.82 10.46 11.56C10.31 11.3 10.44 11.16 10.57 11.03C10.69 10.91 10.83 10.72 10.97 10.56C11.11 10.4 11.15 10.28 11.24 10.11C11.33 9.94 11.28 9.79 11.22 9.67C11.15 9.54 10.63 8.27 10.42 7.74C10.21 7.23 10 7.29 9.84 7.29C9.7 7.28 9.53 7.22 9.11 7.22Z"/>
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Enlarged Portrait & Blurry Glassmorphism -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            <span>MikroTik Academy Trainer • Guru TJKT • Ketua BKK</span>
+          </div>
+
+          <h1 class="hero-title">
+            Kian Tangguh Prawiraguna, <span class="gradient-text">S.Kom., Gr.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Menjembatani keahlian infrastruktur IT industri telekomunikasi (<strong>PT. Digital Satellite Indonesia</strong>) dan agensi kreatif (<strong>Cuatrodia</strong>) ke dalam ruang vokasi modern. Berdedikasi mencetak talenta network engineer berdaya saing global sebagai <strong>Guru Kejuruan TJKT & Ketua BKK</strong> di <strong>SMKS Cyber Media Jakarta</strong> serta <strong>MikroTik Certified Academy Trainer</strong>.
+          </p>
+
+          <!-- Core Metrics (Frosted Glassmorphic Bar) -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">ACTR-2192</span>
+              <span class="stat-label">MikroTik Trainer</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100+</span>
+              <span class="stat-label">Siswa Tersertifikasi</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Gr.</span>
+              <span class="stat-label">Pendidik Profesional</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4+ Thn</span>
+              <span class="stat-label">Pengalaman IT</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#" class="btn-macos-glass btn-large wa-link" target="_blank" rel="noopener">
+              <span class="btn-glass-sheen"></span>
+              <svg class="btn-wa-icon-large" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.22C8.94 7.22 8.66 7.28 8.42 7.54C8.18 7.8 7.5 8.44 7.5 9.74C7.5 11.04 8.45 12.29 8.58 12.46C8.71 12.63 10.4 15.39 13.09 16.44C15.32 17.31 15.78 17.14 16.26 17.09C16.74 17.05 17.81 16.46 18.03 15.84C18.25 15.22 18.25 14.69 18.19 14.58C18.13 14.47 17.96 14.41 17.7 14.28C17.44 14.15 16.17 13.52 15.93 13.43C15.69 13.34 15.52 13.3 15.35 13.56C15.18 13.82 14.69 14.41 14.54 14.58C14.39 14.75 14.24 14.77 13.98 14.64C13.72 14.51 12.89 14.24 11.9 13.36C11.13 12.67 10.61 11.82 10.46 11.56C10.31 11.3 10.44 11.16 10.57 11.03C10.69 10.91 10.83 10.72 10.97 10.56C11.11 10.4 11.15 10.28 11.24 10.11C11.33 9.94 11.28 9.79 11.22 9.67C11.15 9.54 10.63 8.27 10.42 7.74C10.21 7.23 10 7.29 9.84 7.29C9.7 7.28 9.53 7.22 9.11 7.22Z"/>
+              </svg>
+              <span>Hubungi via WhatsApp</span>
+            </a>
+
+            <a href="#sertifikat" class="btn-secondary">
+              <span>Eksplor Sertifikasi</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Enlarged Portrait with Ambient Blur Orbs & Floating Glass Badges -->
+        <div class="hero-showcase">
+          <!-- Ambient Blurry Glowing Orbs -->
+          <div class="hero-glow-orb hero-glow-orb-amber" aria-hidden="true"></div>
+          <div class="hero-glow-orb hero-glow-orb-purple" aria-hidden="true"></div>
+
+          <!-- Frosted Glass Frame for Enlarged Portrait -->
+          <div class="hero-portrait-card">
+            <div class="hero-portrait-inner">
+              <img src="avatar.jpg" alt="Kian Tangguh Prawiraguna, S.Kom., Gr." class="hero-portrait-img avatar-photo" onerror="this.src='assets/kian-profile.jpg';">
+              <div class="hero-portrait-overlay"></div>
+            </div>
+
+            <!-- Floating Blurry Glass Badge - Top Left -->
+            <div class="floating-glass-badge badge-top-left">
+              <div class="badge-icon-wrap icon-amber">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <div class="badge-text-wrap">
+                <span class="badge-tag">MikroTik Certified</span>
+                <span class="badge-highlight font-mono">ACTR-2192 Trainer</span>
+              </div>
+            </div>
+
+            <!-- Floating Blurry Glass Badge - Bottom Right -->
+            <div class="floating-glass-badge badge-bottom-right">
+              <div class="badge-icon-wrap icon-green">
+                <span class="badge-pulse-dot"></span>
+              </div>
+              <div class="badge-text-wrap">
+                <span class="badge-tag">SMKS Cyber Media Jakarta</span>
+                <span class="badge-highlight">Guru TJKT • Ketua BKK</span>
+              </div>
+            </div>
+
+            <!-- Credential Glass Pill - Bottom Left -->
+            <div class="floating-glass-badge badge-bottom-left">
+              <div class="badge-icon-wrap icon-blue">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                </svg>
+              </div>
+              <div class="badge-text-wrap">
+                <span class="badge-tag">Sertifikasi Pendidik</span>
+                <span class="badge-highlight">Lulusan PPG (Gr.)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pengenalan (About) Section -->
+    <section id="tentang" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// PENGENALAN</span>
+          <h2 class="section-title">Menghubungkan Dunia Pendidikan Vokasi & Industri Jaringan</h2>
+          <p class="section-subtitle">
+            Kombinasi keahlian teknis jaringan komputer (*hard skills*) dan dedikasi pedagogis (*teaching expertise*) untuk mencetak calon-calon network engineer andal masa depan.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card bento-main">
+            <div class="card-icon">🎓</div>
+            <h3>Pendidik Kejuruan IT & MikroTik Academy Trainer</h3>
+            <p>
+              Sebagai guru full-time di <strong>SMK Cyber Media Jakarta</strong>, saya bertanggung jawab dalam penyelenggaraan kurikulum kejuruan Teknik Jaringan Komputer dan Telekomunikasi (TJKT) berbasis kebutuhan industri. Sekaligus mengemban amanah sebagai <strong>MikroTik Certified Academy Trainer (ACTR-2192)</strong> untuk melatih, menguji, dan mensertifikasi siswa secara internasional.
+            </p>
+            <div class="bento-tags">
+              <span class="tag">MikroTik Academy Trainer (ACTR)</span>
+              <span class="tag">Pendidikan Profesi Guru (Gr.)</span>
+              <span class="tag">Kurikulum Merdeka TJKT</span>
+              <span class="tag">Hands-on Lab Training</span>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="card-icon">🌐</div>
+            <h3>Routing & Switching Lab</h3>
+            <p>
+              Perancangan dan pengelolaan topologi lab praktikum: static routing, dynamic routing (OSPF, BGP), VLAN switching 802.1Q, DHCP relay, dan tunneling.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="card-icon">🏆</div>
+            <h3>Pembimbing Kompetisi Teknologi</h3>
+            <p>
+              Mendampingi dan membimbing tim siswa dalam ajang kompetisi sains & inovasi teknologi tingkat nasional seperti <em>Samsung Solve for Tomorrow</em> dan LKS.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <div class="card-icon">🛡️</div>
+            <h3>Manajemen & Keamanan Jaringan</h3>
+            <p>
+              Implementasi firewall filter rules, bandwidth management (Queue Tree/PCQ), VPN site-to-site, dan pengamanan akses hotspot sekolah.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pengalaman (Experience) Section -->
+    <section id="pengalaman" class="section-padding bg-surface-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// REKAM JEJAK & KISAH PERJALANAN</span>
+          <h2 class="section-title">Kisah Nyata: Dari Garda Depan IT Support hingga Ruang Kelas</h2>
+          <p class="section-subtitle">Pengalaman nyata di industri telekomunikasi satelit, dukungan infrastruktur agency kreatif, hingga mendedikasikan ilmu sebagai guru dan Ketua BKK.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Chapter 1: PT. Digital Satellite Indonesia (IT Support Technician & Help Desk) -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-chapter-badge">GARDA DEPAN // TELECOM SUPPORT</span>
+              
+              <!-- Company Header with Logo -->
+              <div class="timeline-header-with-logo">
+                <div class="company-logo-wrapper logo-white-bg">
+                  <img src="assets/logo-digigroup.png" alt="Logo PT. Digital Satellite Indonesia" class="company-logo">
+                </div>
+                <div class="company-title-group">
+                  <h3 class="timeline-company">PT. Digital Satellite Indonesia (Digigroup Telecom Services)</h3>
+                  <div class="timeline-meta">
+                    <span class="timeline-period">Sep 2022 - Mei 2024 (1 Thn 9 Bln)</span>
+                    <span class="timeline-role">IT Support Technician & Help Desk Support</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Story Narrative -->
+              <div class="timeline-story-box">
+                <div class="story-header">
+                  <span class="story-icon">🛰️</span>
+                  <span>Catatan Pengalaman: Menjaga Denyut Konektivitas Satelit & Jaringan Kritis</span>
+                </div>
+                <p class="story-paragraph">
+                  "Bekerja di PT. Digital Satellite Indonesia adalah kawah candradimuka saya di industri telekomunikasi sesungguhnya. Di sini, IT Support bukan sekadar merestart komputer, melainkan menjaga denyut nadi konektivitas pelanggan korporat yang bertumpu pada transmisi satelit dan data link. Saya bertugas merespons eskalasi gangguan klien secara 24/7 melalui panggilan telepon, tiket, dan email—menenangkan klien di saat kritis dan bergerak cepat melakukan diagnosa awal.<br><br>
+                  Tanggung jawab saya mencakup penyusunan dokumen operasional berkekuatan hukum kontrak: <strong>Maintenance Notifications</strong> sebelum jadwal pemeliharaan, <strong>Incident Reports</strong> berkala, serta dokumen <strong>Reason for Outage (RFO)</strong> pasca-insiden yang menuntut analisis akar masalah (*Root Cause Analysis*) presisi. Di sisi teknisi lapangan (*On-site Technician*), saya turun langsung menangani rak perangkat jaringan <strong>Cisco Networking</strong>, penggantian modul hardware, pengujian konektivitas link, dan penataan kabel rak server. Pengalaman ini membentuk mentalitas saya: tenang di bawah tekanan tinggi, disiplin dalam dokumentasi, dan teliti hingga ke detail terkecil."
+                </p>
+              </div>
+
+              <p class="timeline-desc">
+                Mengemban dua tanggung jawab strategis: sebagai Help Desk Support (analisis tiket, eskalasi insiden, penyusunan RFO) dan IT Support Technician (troubleshooting perangkat Cisco, hardware, dan link telekomunikasi on-site).
+              </p>
+              <ul class="timeline-achievements">
+                <li>Menangani keluhan teknis pelanggan korporat via call, chat, dan ticketing system dengan SLA response time terukur.</li>
+                <li>Menyusun dokumen teknis: Maintenance Notifications, Incident Reports, dan Reason for Outage (RFO) untuk klien B2B.</li>
+                <li>Melakukan instalasi, konfigurasi, dan pemeliharaan hardware switch/router Cisco serta perangkat transmisi data satelit.</li>
+                <li>Pemantauan status kesehatan link jaringan (*Daily Monitoring Log*) untuk mencegah terjadinya outage tak terduga.</li>
+              </ul>
+              <div class="tech-pills">
+                <span>Cisco Networking</span>
+                <span>IT Helpdesk 24/7</span>
+                <span>Reason for Outage (RFO)</span>
+                <span>Incident Management</span>
+                <span>Hardware Maintenance</span>
+                <span>Telecom Services</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 2: Cuatrodia Creative Circle (Freelance IT Support) -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-chapter-badge">INFRASTRUKTUR // CREATIVE STUDIO</span>
+              
+              <!-- Company Header with Logo -->
+              <div class="timeline-header-with-logo">
+                <div class="company-logo-wrapper">
+                  <img src="assets/logo-cuatrodia.jpg" alt="Logo Cuatrodia Creative Circle" class="company-logo">
+                </div>
+                <div class="company-title-group">
+                  <h3 class="timeline-company">Cuatrodia Creative Circle — Pasar Minggu, Jakarta</h3>
+                  <div class="timeline-meta">
+                    <span class="timeline-period">Jul 2026 - Sekarang (Freelance)</span>
+                    <span class="timeline-role">IT Support Specialist (Hybrid)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Story Narrative -->
+              <div class="timeline-story-box">
+                <div class="story-header">
+                  <span class="story-icon">💾</span>
+                  <span>Catatan Pengalaman: Mengamankan Aset Kreatif via Synology NAS & Network</span>
+                </div>
+                <p class="story-paragraph">
+                  "Di industri agensi kreatif, aset digital adalah nyawa bisnis. Tantangan terbesar tim kreatif adalah perpindahan file raksasa (video 4K, rendering 3D, dan master design) tanpa hambatan (*bottleneck*). Sebagai IT Support freelance di Cuatrodia Creative Circle, fokus utama saya adalah merancang dan memelihara <strong>Network Services</strong> serta penyimpanan terpusat berbasis <strong>Synology NAS</strong>.<br><br>
+                  Saya mengonfigurasi skema RAID redundan, manajemen hak akses folder berbasis peran, bandwidth QoS jaringan lokal agar transfer file tim video tidak mengganggu operasional tim lainnya, serta sistem backup berkala otomatis. Ketika tim kreatif dapat bekerja mulus dari studio maupun remote tanpa takut kehilangan data, itulah kebahagiaan seorang IT Support."
+                </p>
+              </div>
+
+              <p class="timeline-desc">
+                Dukungan teknis menyeluruh untuk studio kreatif: pemeliharaan Network Services, konfigurasi dan manajemen storage server Synology NAS, serta penanganan insiden perangkat IT tim.
+              </p>
+              <ul class="timeline-achievements">
+                <li>Implementasi dan maintenance server Synology NAS untuk alur kerja kolaborasi file skala besar tim kreatif.</li>
+                <li>Optimasi jaringan lokal (LAN/WLAN) untuk menjamin transfer data berkecepatan tinggi antar-workstation.</li>
+                <li>Setup backup otomatis terjadwal untuk mencegah data loss aset-aset proyek penting agensi.</li>
+              </ul>
+              <div class="tech-pills">
+                <span>Synology NAS</span>
+                <span>Network Services</span>
+                <span>Data Backup & RAID</span>
+                <span>Hybrid IT Support</span>
+                <span>Storage Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 3: SMKS Cyber Media Jakarta (Teacher & Ketua BKK) -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-chapter-badge">PENDIDIKAN // KETUA BKK & GURU</span>
+              
+              <!-- Company Header with Logo -->
+              <div class="timeline-header-with-logo">
+                <div class="company-logo-wrapper">
+                  <img src="assets/logo-cybermedia.jpg" alt="Logo SMKS Cyber Media Jakarta" class="company-logo">
+                </div>
+                <div class="company-title-group">
+                  <h3 class="timeline-company">SMKS Cyber Media Jakarta</h3>
+                  <div class="timeline-meta">
+                    <span class="timeline-period">Jun 2024 - Sekarang (2 Thn 6 Bln)</span>
+                    <span class="timeline-role">Network Teacher & Ketua Bursa Kerja Khusus (BKK)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Story Narrative -->
+              <div class="timeline-story-box">
+                <div class="story-header">
+                  <span class="story-icon">🤝</span>
+                  <span>Catatan Pengalaman: Dari Praktisi Menjadi Jembatan Siswa ke Dunia Industri</span>
+                </div>
+                <p class="story-paragraph">
+                  "Menjadi guru bukan sekadar mengajar di kelas, melainkan memastikan siswa memiliki masa depan yang jelas setelah lulus. Pengalaman nyata saya di dunia IT Support dan jaringan telekomunikasi saya bawa langsung ke laboratorium: mengajarkan konfigurasi hardware komputer riil dan Cisco Networking sesuai standar industri.<br><br>
+                  Sebagai <strong>Ketua Bursa Kerja Khusus (BKK)</strong>, saya bertindak sebagai jembatan penghubung antara sekolah dengan dunia industri (DUDI). Saya aktif membangun kemitraan strategis dengan institusi teknologi terkemuka (seperti kolaborasi bersama Brainmatics dan perusahaan IT lainnya), menyelenggarakan program magang, serta mengawal rekrutmen kerja bagi para lulusan. Momen melihat siswa yang dulunya ragu kini berhasil menandatangani kontrak kerja pertama mereka di industri IT adalah kebanggaan terbesar dalam hidup saya."
+                </p>
+              </div>
+
+              <p class="timeline-desc">
+                Mengajar kompetensi kejuruan Cisco Networking & Computer Hardware, sekaligus memimpin Bursa Kerja Khusus (BKK) untuk penyaluran lulusan ke dunia kerja industri.
+              </p>
+              <ul class="timeline-achievements">
+                <li>Mengajar mata pelajaran keahlian: Cisco Networking, Computer Hardware, dan Administrasi Jaringan.</li>
+                <li>Menjabat sebagai Ketua BKK: memfasilitasi kemitraan industri, penyaluran magang, dan rekrutmen kerja lulusan (termasuk kolaborasi Brainmatics).</li>
+                <li>Menyelenggarakan pelatihan persiapan karir, simulasi interview teknis, dan sertifikasi keahlian bagi siswa tingkat akhir.</li>
+              </ul>
+              <div class="tech-pills">
+                <span>Ketua BKK</span>
+                <span>Cisco Networking</span>
+                <span>Computer Hardware</span>
+                <span>Kemitraan Industri</span>
+                <span>Brainmatics Partner</span>
+                <span>Penyaluran Kerja</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 4: MikroTik Academy Lead Trainer (ACTR2192) -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-chapter-badge">LISENSI GLOBAL // MIKROTIK TRAINER</span>
+              
+              <!-- Company Header with Logo -->
+              <div class="timeline-header-with-logo">
+                <div class="company-logo-wrapper logo-white-bg">
+                  <img src="assets/logo-mikrotik.png" alt="Logo MikroTik Academy" class="company-logo" style="object-fit: contain; padding: 6px;">
+                </div>
+                <div class="company-title-group">
+                  <h3 class="timeline-company">MikroTik Academy — SMKS Cyber Media Jakarta</h3>
+                  <div class="timeline-meta">
+                    <span class="timeline-period">Lisensi Resmi Mikrotikls SIA</span>
+                    <span class="timeline-role">MikroTik Certified Academy Trainer</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Story Narrative -->
+              <div class="timeline-story-box">
+                <div class="story-header">
+                  <span class="story-icon">📖</span>
+                  <span>Catatan Pengalaman: Membuka Gerbang Sertifikasi Internasional</span>
+                </div>
+                <p class="story-paragraph">
+                  "Saya ingin siswa memiliki sertifikat yang diakui tidak hanya di Jakarta, tapi di seluruh dunia. Dengan memegang sertifikat lisensi <strong>ACTR-2192</strong> langsung dari Mikrotikls SIA (Riga, Latvia), saya mendirikan kelas resmi MikroTik Academy. Di sini, siswa dilatih menangani RouterOS v7, dynamic routing OSPF/BGP, dan keamanan jaringan secara intensif hingga mereka berhasil lulus sertifikasi MTCNA dengan bangga."
+                </p>
+              </div>
+
+              <p class="timeline-desc">
+                Pelatihan sertifikasi internasional MTCNA (*MikroTik Certified Network Associate*) terstruktur berbasis hands-on lab RouterOS.
+              </p>
+              <ul class="timeline-achievements">
+                <li>Melatih dan mensertifikasi ratusan siswa dengan kurikulum internasional resmi dari Mikrotikls SIA.</li>
+                <li>Membekali lulusan dengan sertifikat kompetensi global yang menjadi nilai tawar unggul saat melamar pekerjaan di industri networking.</li>
+              </ul>
+              <div class="tech-pills">
+                <span>Trainer ID: ACTR2192</span>
+                <span>MTCNA Certification</span>
+                <span>RouterOS v7</span>
+                <span>OSPF & Tunneling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 5: Riwayat Pendidikan Formal & Profesi -->
+          <div class="timeline-item">
+            <div class="timeline-marker" style="border-color: #38bdf8;"></div>
+            <div class="timeline-content" style="border-color: rgba(56, 189, 248, 0.28);">
+              <span class="timeline-chapter-badge" style="color: #38bdf8; border-color: #38bdf8; background: rgba(56, 189, 248, 0.12);">KUALIFIKASI RESMI // PENDIDIK</span>
+              
+              <!-- Company Header with Logo -->
+              <div class="timeline-header-with-logo">
+                <div class="company-logo-wrapper" style="background: #0270ba; border-color: #38bdf8;">
+                  <img src="assets/logo-ppg.png" alt="Logo PPG Pendidikan Profesi Guru" class="company-logo" style="object-fit: contain; padding: 4px;">
+                </div>
+                <div class="company-title-group">
+                  <h3 class="timeline-company">Pendidikan Tinggi & Sertifikasi Pendidik Profesional</h3>
+                  <div class="timeline-meta">
+                    <span class="timeline-period" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8;">Gelar Akademik & Profesi</span>
+                    <span class="timeline-role">S.Kom., Gr.</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Story Narrative -->
+              <div class="timeline-story-box" style="border-left-color: #38bdf8;">
+                <div class="story-header" style="color: #38bdf8;">
+                  <span class="story-icon">🎓</span>
+                  <span>Catatan Pengalaman: Mengukuhkan Integritas Profesi</span>
+                </div>
+                <p class="story-paragraph">
+                  "Menyelesaikan studi Sarjana Komputer (S.Kom.) dan Program Pendidikan Profesi Guru (PPG) Kemendikbudristek hingga meraih gelar kehormatan <strong>Gr. (Guru Profesional)</strong> adalah komitmen saya untuk selalu menyajikan standar pengajaran berkualitas tinggi yang berakar pada pengalaman industri nyata."
+                </p>
+              </div>
+
+              <ul class="timeline-achievements">
+                <li><strong>Pendidikan Profesi Guru (PPG) — Gelar: Gr.</strong> dari Kemendikbudristek RI (Bidang Keahlian: Teknik Komputer & Informatika).</li>
+                <li><strong>Sarjana Komputer (S.Kom.)</strong> — Menempuh pendidikan strata satu (S1) bidang ilmu komputer, sistem jaringan, dan perangkat keras.</li>
+              </ul>
+              <div class="tech-pills">
+                <span>Gelar: S.Kom., Gr.</span>
+                <span>Kemendikbudristek RI</span>
+                <span>Pedagogi Kejuruan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keahlian (Skills) Section -->
+    <section id="keahlian" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// SPESIALISASI & KOMPETENSI</span>
+          <h2 class="section-title">Keahlian Teknis & Pedagogis</h2>
+          <p class="section-subtitle">Penguasaan menyeluruh ekosistem jaringan komputer enterprise, administrasi RouterOS, serta metodologi transfer keilmuan kejuruan.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <span class="cat-icon">🔀</span>
+              <h3 class="cat-title">MikroTik & Core Routing</h3>
+            </div>
+            <p class="cat-desc">Konfigurasi mendalam RouterOS untuk skala lab hingga distribusi jaringan.</p>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-name"><span>MikroTik RouterOS (v6 & v7)</span> <span class="skill-level">Trainer Expert</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 96%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Dynamic Routing (OSPF & BGP)</span> <span class="skill-level">Lanjutan</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Tunneling (EoIP, IPIP, PPTP/SSTP, WireGuard)</span> <span class="skill-level">Lanjutan</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Bandwidth Management (Queue Tree & PCQ)</span> <span class="skill-level">Lanjutan</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 94%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <span class="cat-icon">🎓</span>
+              <h3 class="cat-title">Pedagogi & Pelatihan Vokasi</h3>
+            </div>
+            <p class="cat-desc">Instruksi kejuruan, kurikulum berbasis lab, dan bimbingan sertifikasi.</p>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-name"><span>Instruktur MikroTik Academy (MTCNA Training)</span> <span class="skill-level">Certified ACTR</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 98%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Penyusunan Kurikulum & Modul Lab TJKT</span> <span class="skill-level">Mahir</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Pembimbingan Uji Kompetensi Keahlian (UKK)</span> <span class="skill-level">Lanjutan</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name"><span>Mentoring Kompetisi Sains & Inovasi Teknologi</span> <span class="skill-level">Aktif</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <span class="cat-icon">🛡️</span>
+              <h3 class="cat-title">Network Security & Switching</h3>
+            </div>
+            <p class="cat-desc">Segmentasi jaringan lokal dan pertahanan perimeter keamanan.</p>
+            <div class="vendor-badges">
+              <span class="v-badge"><span class="v-dot"></span> Firewall Filter & RAW</span>
+              <span class="v-badge"><span class="v-dot"></span> NAT (srcnat / dstnat)</span>
+              <span class="v-badge"><span class="v-dot"></span> Mangle Traffic Shaping</span>
+              <span class="v-badge"><span class="v-dot"></span> VLAN Switching (802.1Q)</span>
+              <span class="v-badge"><span class="v-dot"></span> Hotspot User Manager</span>
+              <span class="v-badge"><span class="v-dot"></span> DHCP Snooping & ARP Inspection</span>
+            </div>
+          </div>
+
+          <!-- Skill Category 4 -->
+          <div class="skill-category-card">
+            <div class="cat-header">
+              <span class="cat-icon">⚙️</span>
+              <h3 class="cat-title">Perangkat & Ekosistem Alat</h3>
+            </div>
+            <p class="cat-desc">Alat software & hardware yang rutin digunakan dalam kegiatan instruksi & lab.</p>
+            <div class="vendor-badges">
+              <span class="v-badge"><span class="v-dot"></span> MikroTik RouterBoard</span>
+              <span class="v-badge"><span class="v-dot"></span> Winbox & Terminal CLI</span>
+              <span class="v-badge"><span class="v-dot"></span> Cisco Switch & Router</span>
+              <span class="v-badge"><span class="v-dot"></span> Cisco Packet Tracer</span>
+              <span class="v-badge"><span class="v-dot"></span> Wireshark Packet Analyzer</span>
+              <span class="v-badge"><span class="v-dot"></span> Linux Server (Debian/Ubuntu)</span>
+              <span class="v-badge"><span class="v-dot"></span> OTDR & Splicer Fiber Optic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sertifikat (Certifications) Section -->
+    <section id="sertifikat" class="section-padding bg-surface-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// VALIDASI & LISENSI RESMI</span>
+          <h2 class="section-title">Sertifikasi & Kredensial Pendidik</h2>
+          <p class="section-subtitle">Kredensial dan lisensi resmi dari Mikrotikls SIA (Latvia) serta Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi RI (Kemendikbudristek) sebagai trainer internasional dan guru vokasi profesional.</p>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: MikroTik Academy Trainer -->
+          <div class="cert-card">
+            <div class="cert-badge-glow"></div>
+            <div class="cert-icon-box mikrotik-glow">
+              <span class="cert-vendor">MIKROTIK</span>
+              <span class="cert-code">ACTR</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">MikroTik Certified Academy Trainer</h3>
+              <p class="cert-issuer">Mikrotikls SIA (Riga, Latvia)</p>
+              <div class="cert-meta">
+                <span class="meta-label">Lisensi Resmi:</span>
+                <span class="meta-val">Instruktur resmi berwenang menyelenggarakan pelatihan kurikulum RouterOS dan sertifikasi internasional MTCNA bagi siswa di institusi pendidikan.</span>
+              </div>
+              <div class="cert-footer">
+                <span class="status-valid">● Terverifikasi Aktif</span>
+                <span class="cert-id font-mono">ID: ACTR-2192</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2: MTCRE -->
+          <div class="cert-card">
+            <div class="cert-badge-glow"></div>
+            <div class="cert-icon-box mikrotik-glow">
+              <span class="cert-vendor">MIKROTIK</span>
+              <span class="cert-code">MTCRE</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">MikroTik Certified Routing Engineer</h3>
+              <p class="cert-issuer">Mikrotikls SIA (Riga, Latvia)</p>
+              <div class="cert-meta">
+                <span class="meta-label">Domain Keahlian:</span>
+                <span class="meta-val">Advanced Routing, OSPF Single & Multi-Area, Point-to-Point Addressing, VPN Tunneling (EoIP, IPIP, PPTP, L2TP), dan VLAN Interface.</span>
+              </div>
+              <div class="cert-footer">
+                <span class="status-valid">● Terverifikasi Aktif</span>
+                <span class="cert-id font-mono">Engineer Level</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 3: MTCNA -->
+          <div class="cert-card">
+            <div class="cert-badge-glow"></div>
+            <div class="cert-icon-box mikrotik-glow">
+              <span class="cert-vendor">MIKROTIK</span>
+              <span class="cert-code">MTCNA</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">MikroTik Certified Network Associate</h3>
+              <p class="cert-issuer">Mikrotikls SIA (Riga, Latvia)</p>
+              <div class="cert-meta">
+                <span class="meta-label">Domain Keahlian:</span>
+                <span class="meta-val">RouterOS Foundation, Routing & Bridging, Manajemen Bandwidth (QoS Queues), Keamanan Jaringan & Firewall Filter/NAT.</span>
+              </div>
+              <div class="cert-footer">
+                <span class="status-valid">● Terverifikasi Aktif</span>
+                <span class="cert-id font-mono">Associate Level</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 4: Sertifikat Pendidik (PPG / Serdik - Gr.) -->
+          <div class="cert-card">
+            <div class="cert-badge-glow"></div>
+            <div class="cert-icon-box ppg-glow">
+              <span class="cert-vendor">PPG</span>
+              <span class="cert-code">Gr.</span>
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">Sertifikat Pendidik (Serdik) — Guru Profesional</h3>
+              <p class="cert-issuer">Kemendikbudristek RI • Ditjen Guru dan Tenaga Kependidikan (GTK)</p>
+              <div class="cert-meta">
+                <span class="meta-label">Kualifikasi Resmi:</span>
+                <span class="meta-val">Kelulusan resmi Pendidikan Profesi Guru (PPG) bidang Teknik Komputer & Informatika (TKI) Kemendikbudristek RI, berhak menyandang gelar profesi <strong>Gr. (Guru Profesional)</strong>.</span>
+              </div>
+              <div class="cert-footer">
+                <span class="status-valid">● Pendidik Tersertifikasi</span>
+                <span class="cert-id font-mono">Gelar Profesi: Gr.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="section-padding">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <span class="section-tag">// TERHUBUNG DENGAN SAYA</span>
+            <h2 class="section-title">Kolaborasi Pendidikan Vokasi & Konsultasi Jaringan</h2>
+            <p class="section-subtitle">
+              Tertarik berdiskusi seputar implementasi MikroTik Academy di sekolah, kurikulum praktikum TJKT, pelatihan MTCNA, atau kolaborasi edukasi teknologi? Hubungi saya langsung.
+            </p>
+          </div>
+
+          <!-- Action Buttons Wrapper -->
+          <div class="contact-action-wrapper" style="gap: 1.2rem; flex-wrap: wrap;">
+            <!-- MacBook Glass WA Button -->
+            <a href="#" class="btn-macos-glass btn-hero-wa wa-link" target="_blank" rel="noopener">
+              <span class="glass-reflection"></span>
+              <svg class="btn-wa-icon-large" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.22C8.94 7.22 8.66 7.28 8.42 7.54C8.18 7.8 7.5 8.44 7.5 9.74C7.5 11.04 8.45 12.29 8.58 12.46C8.71 12.63 10.4 15.39 13.09 16.44C15.32 17.31 15.78 17.14 16.26 17.09C16.74 17.05 17.81 16.46 18.03 15.84C18.25 15.22 18.25 14.69 18.19 14.58C18.13 14.47 17.96 14.41 17.7 14.28C17.44 14.15 16.17 13.52 15.93 13.43C15.69 13.34 15.52 13.3 15.35 13.56C15.18 13.82 14.69 14.41 14.54 14.58C14.39 14.75 14.24 14.77 13.98 14.64C13.72 14.51 12.89 14.24 11.9 13.36C11.13 12.67 10.61 11.82 10.46 11.56C10.31 11.3 10.44 11.16 10.57 11.03C10.69 10.91 10.83 10.72 10.97 10.56C11.11 10.4 11.15 10.28 11.24 10.11C11.33 9.94 11.28 9.79 11.22 9.67C11.15 9.54 10.63 8.27 10.42 7.74C10.21 7.23 10 7.29 9.84 7.29C9.7 7.28 9.53 7.22 9.11 7.22Z"/>
+              </svg>
+              <div class="btn-macos-text">
+                <span class="btn-title">Chat via WhatsApp</span>
+                <span class="btn-subtext" id="waDisplayNumber">+62 8xx-xxxx-xxxx</span>
+              </div>
+            </a>
+
+            <!-- LinkedIn Glass Button -->
+            <a href="https://www.linkedin.com/in/kianprawiraguna/" target="_blank" rel="noopener" class="btn-macos-glass btn-hero-wa" style="border-color: rgba(14, 118, 168, 0.4);">
+              <span class="glass-reflection"></span>
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#0a66c2">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.45 1.45 0 0 0 0-2.9 1.45 1.45 0 0 0 0 2.9m1.39 9.74v-8.37H5.07v8.37h2.78Z"/>
+              </svg>
+              <div class="btn-macos-text">
+                <span class="btn-title">Profil LinkedIn</span>
+                <span class="btn-subtext" style="color: #38bdf8;">/in/kianprawiraguna</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="contact-details">
+            <div class="c-item">
+              <span class="c-label">Institusi</span>
+              <span class="c-link">SMK Cyber Media Jakarta</span>
+            </div>
+            <div class="c-item">
+              <span class="c-label">Lokasi</span>
+              <span class="c-link">Jakarta Selatan, DKI Jakarta</span>
+            </div>
+            <div class="c-item">
+              <span class="c-label">Peran</span>
+              <span class="c-link">Guru Full-Time & Trainer MikroTik</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>© <span id="currentYear">2026</span> Kian Tangguh Prawiraguna, S.Kom., Gr. • IT Educator & MikroTik Academy Trainer.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/kianprawiraguna/" target="_blank" rel="noopener">LinkedIn</a>
+        <span style="opacity: 0.3;">•</span>
+        <a href="#hero">Kembali ke Atas ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Glass Button (Always accessible) -->
+  <aside class="floating-wa-container">
+    <a href="#" class="btn-macos-glass floating-wa-btn wa-link" title="Hubungi via WhatsApp" target="_blank" rel="noopener" aria-label="Kontak WhatsApp">
+      <svg class="btn-wa-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.22C8.94 7.22 8.66 7.28 8.42 7.54C8.18 7.8 7.5 8.44 7.5 9.74C7.5 11.04 8.45 12.29 8.58 12.46C8.71 12.63 10.4 15.39 13.09 16.44C15.32 17.31 15.78 17.14 16.26 17.09C16.74 17.05 17.81 16.46 18.03 15.84C18.25 15.22 18.25 14.69 18.19 14.58C18.13 14.47 17.96 14.41 17.7 14.28C17.44 14.15 16.17 13.52 15.93 13.43C15.69 13.34 15.52 13.3 15.35 13.56C15.18 13.82 14.69 14.41 14.54 14.58C14.39 14.75 14.24 14.77 13.98 14.64C13.72 14.51 12.89 14.24 11.9 13.36C11.13 12.67 10.61 11.82 10.46 11.56C10.31 11.3 10.44 11.16 10.57 11.03C10.69 10.91 10.83 10.72 10.97 10.56C11.11 10.4 11.15 10.28 11.24 10.11C11.33 9.94 11.28 9.79 11.22 9.67C11.15 9.54 10.63 8.27 10.42 7.74C10.21 7.23 10 7.29 9.84 7.29C9.7 7.28 9.53 7.22 9.11 7.22Z"/>
+      </svg>
+      <span class="floating-text">Chat WhatsApp</span>
+    </a>
+  </aside>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>
