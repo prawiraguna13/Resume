@@ -579,14 +579,55 @@ body {
   100% { transform: scale(1.08) translate(10px, -10px); opacity: 0.85; }
 }
 
-/* Frosted Glass Frame for Enlarged Portrait */
+/* 3D Interactive Flip Card for Hero Portrait */
 .hero-portrait-card {
   position: relative;
   z-index: 2;
   width: 100%;
   max-width: 400px;
-  padding: 12px;
+  perspective: 1400px;
+  -webkit-perspective: 1400px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hero-flip-inner {
+  position: relative;
+  width: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* 3D Flip Trigger: Hover on desktop, .is-flipped class on mobile tap */
+.hero-portrait-card:hover .hero-flip-inner,
+.hero-portrait-card.is-flipped .hero-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* Floating badges smoothly fade out while flipped so backface is crystal clear */
+.hero-portrait-card:hover .floating-glass-badge,
+.hero-portrait-card.is-flipped .floating-glass-badge {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* Front & Back Faces Base */
+.card-face {
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 28px;
+}
+
+/* Front Face: Portrait Photo Frame */
+.card-face-front {
+  position: relative;
+  z-index: 2;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  padding: 12px;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
   border: 1px solid rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(24px);
@@ -595,10 +636,10 @@ body {
     0 30px 60px -15px rgba(0, 0, 0, 0.7),
     0 0 35px rgba(245, 158, 11, 0.12),
     inset 0 1px 1px rgba(255, 255, 255, 0.35);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
 }
 
-[data-theme="light"] .hero-portrait-card {
+[data-theme="light"] .card-face-front {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.88) 0%, rgba(250, 245, 235, 0.65) 100%);
   border: 1px solid rgba(245, 158, 11, 0.28);
   box-shadow: 
@@ -607,12 +648,284 @@ body {
     inset 0 1px 2px rgba(255, 255, 255, 0.95);
 }
 
-.hero-portrait-card:hover {
-  transform: translateY(-4px);
+/* Back Face: High-Tech Faculty & Trainer Credential ID Card */
+.card-face-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  z-index: 1;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(150deg, rgba(20, 24, 38, 0.96) 0%, rgba(10, 13, 20, 0.98) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   box-shadow: 
-    0 35px 70px -15px rgba(0, 0, 0, 0.8),
-    0 0 45px rgba(245, 158, 11, 0.22),
-    inset 0 1px 2px rgba(255, 255, 255, 0.5);
+    0 35px 70px -15px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(245, 158, 11, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .card-face-back {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.97) 0%, rgba(248, 244, 236, 0.95) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  box-shadow: 
+    0 25px 50px -12px rgba(180, 83, 9, 0.22),
+    0 0 35px rgba(245, 158, 11, 0.15),
+    inset 0 1px 2px #fff;
+}
+
+/* Flip Hint Pill on Front Photo */
+.flip-hint-pill {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(10, 14, 22, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f3f4f6;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="light"] .flip-hint-pill {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #1e293b;
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.18);
+}
+
+/* ID Card Backface Components */
+.id-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] .id-card-header {
+  border-bottom-color: rgba(245, 158, 11, 0.18);
+}
+
+.id-card-org {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.id-org-emblem {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.id-org-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--text-heading);
+  line-height: 1.2;
+}
+
+.id-org-sub {
+  font-size: 0.62rem;
+  color: var(--accent-amber);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.id-card-chip {
+  display: flex;
+  align-items: center;
+}
+
+.chip-svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.id-card-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.id-avatar-mini {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid rgba(245, 158, 11, 0.65);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.28);
+}
+
+.id-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.id-profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.id-profile-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 2px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.id-profile-role {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.id-verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10b981;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.id-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.id-card-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="light"] .id-card-specs {
+  background: rgba(245, 158, 11, 0.05);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+
+.id-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.id-spec-label {
+  font-size: 0.58rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.id-spec-value {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.id-spec-value.highlight-amber {
+  color: var(--accent-amber);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.id-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] .id-card-footer {
+  border-top-color: rgba(245, 158, 11, 0.18);
+}
+
+.id-barcode-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.id-barcode-lines {
+  width: 130px;
+  max-width: 45%;
+  height: 22px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--text-heading) 0px,
+    var(--text-heading) 2px,
+    transparent 2px,
+    transparent 4px,
+    var(--text-heading) 4px,
+    var(--text-heading) 7px,
+    transparent 7px,
+    transparent 9px,
+    var(--text-heading) 9px,
+    var(--text-heading) 10px,
+    transparent 10px,
+    transparent 13px
+  );
+  opacity: 0.75;
+  border-radius: 2px;
+}
+
+.id-code {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+}
+
+.id-flip-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.64rem;
+  color: var(--text-muted);
+  opacity: 0.8;
+  margin-top: 2px;
 }
 
 /* Inner Portrait Container & Photo */

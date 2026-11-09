@@ -18,15 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initSpotlightFollower();
   initDynamicYear();
   initAvatarDetection();
+  initHeroFlipCard();
 });
+
+/**
+ * 3D Flip Card Toggle (Tap/Click support for touch devices and accessibility)
+ */
+function initHeroFlipCard() {
+  const card = document.querySelector('.hero-portrait-card');
+  if (!card) return;
+
+  card.addEventListener('click', (e) => {
+    if (e.target.closest('a') || e.target.closest('button')) return;
+    card.classList.toggle('is-flipped');
+  });
+}
 
 /**
  * Otomatis mendeteksi jika user meletakkan file foto avatar.jpg / avatar.png
  */
 function initAvatarDetection() {
-  const avatarImg = document.querySelector('.avatar-photo');
+  const avatarImgs = document.querySelectorAll('.avatar-photo');
   const fallbackGraphic = document.querySelector('.avatar-network-graphic');
-  if (!avatarImg) return;
+  if (!avatarImgs.length) return;
 
   const candidateExtensions = ['avatar.jpg', 'avatar.png', 'avatar.webp', 'foto.jpg', 'foto.png'];
   
@@ -35,8 +49,10 @@ function initAvatarDetection() {
     const testImg = new Image();
     testImg.src = candidateExtensions[index];
     testImg.onload = () => {
-      avatarImg.src = candidateExtensions[index];
-      avatarImg.style.display = 'block';
+      avatarImgs.forEach((img) => {
+        img.src = candidateExtensions[index];
+        img.style.display = 'block';
+      });
       if (fallbackGraphic) fallbackGraphic.style.display = 'none';
     };
     testImg.onerror = () => {

@@ -130,48 +130,138 @@
           <div class="hero-glow-orb hero-glow-orb-amber" aria-hidden="true"></div>
           <div class="hero-glow-orb hero-glow-orb-purple" aria-hidden="true"></div>
 
-          <!-- Frosted Glass Frame for Enlarged Portrait -->
-          <div class="hero-portrait-card">
-            <div class="hero-portrait-inner">
-              <img src="avatar.jpg" alt="Kian Tangguh Prawiraguna, S.Kom., Gr." class="hero-portrait-img avatar-photo" onerror="this.src='assets/kian-profile.jpg';">
-              <div class="hero-portrait-overlay"></div>
-            </div>
+          <!-- Frosted Glass Frame for Enlarged Portrait with 3D Flip -->
+          <div class="hero-portrait-card" id="heroPortraitCard" role="region" aria-label="Kartu Identitas Kian Tangguh Prawiraguna, arahkan mouse atau sentuh untuk membalik">
+            <div class="hero-flip-inner">
+              <!-- FRONT FACE: Foto Portrait & Badges -->
+              <div class="card-face card-face-front">
+                <div class="hero-portrait-inner">
+                  <img src="avatar.jpg" alt="Kian Tangguh Prawiraguna, S.Kom., Gr." class="hero-portrait-img avatar-photo" onerror="this.src='assets/kian-profile.jpg';">
+                  <div class="hero-portrait-overlay"></div>
+                  <div class="flip-hint-pill" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                      <path d="M3 3v5h5"/>
+                      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                      <path d="M21 21v-5h-5"/>
+                    </svg>
+                    <span>3D ID Card • Hover / Tap</span>
+                  </div>
+                </div>
 
-            <!-- Floating Blurry Glass Badge - Top Left -->
-            <div class="floating-glass-badge badge-top-left">
-              <div class="badge-icon-wrap icon-amber">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-              </div>
-              <div class="badge-text-wrap">
-                <span class="badge-tag">MikroTik Certified</span>
-                <span class="badge-highlight font-mono">ACTR-2192 Trainer</span>
-              </div>
-            </div>
+                <!-- Floating Blurry Glass Badge - Top Left -->
+                <div class="floating-glass-badge badge-top-left">
+                  <div class="badge-icon-wrap icon-amber">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-tag">MikroTik Certified</span>
+                    <span class="badge-highlight font-mono">ACTR-2192 Trainer</span>
+                  </div>
+                </div>
 
-            <!-- Floating Blurry Glass Badge - Bottom Right -->
-            <div class="floating-glass-badge badge-bottom-right">
-              <div class="badge-icon-wrap icon-green">
-                <span class="badge-pulse-dot"></span>
-              </div>
-              <div class="badge-text-wrap">
-                <span class="badge-tag">SMKS Cyber Media Jakarta</span>
-                <span class="badge-highlight">Guru TJKT • Ketua BKK</span>
-              </div>
-            </div>
+                <!-- Floating Blurry Glass Badge - Bottom Right -->
+                <div class="floating-glass-badge badge-bottom-right">
+                  <div class="badge-icon-wrap icon-green">
+                    <span class="badge-pulse-dot"></span>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-tag">SMKS Cyber Media Jakarta</span>
+                    <span class="badge-highlight">Guru TJKT • Ketua BKK</span>
+                  </div>
+                </div>
 
-            <!-- Credential Glass Pill - Bottom Left -->
-            <div class="floating-glass-badge badge-bottom-left">
-              <div class="badge-icon-wrap icon-blue">
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"/>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-                </svg>
+                <!-- Credential Glass Pill - Bottom Left -->
+                <div class="floating-glass-badge badge-bottom-left">
+                  <div class="badge-icon-wrap icon-blue">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                      <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                    </svg>
+                  </div>
+                  <div class="badge-text-wrap">
+                    <span class="badge-tag">Sertifikasi Pendidik</span>
+                    <span class="badge-highlight">Lulusan PPG (Gr.)</span>
+                  </div>
+                </div>
               </div>
-              <div class="badge-text-wrap">
-                <span class="badge-tag">Sertifikasi Pendidik</span>
-                <span class="badge-highlight">Lulusan PPG (Gr.)</span>
+
+              <!-- BACK FACE: Official Faculty & Trainer ID Card -->
+              <div class="card-face card-face-back" aria-hidden="true">
+                <!-- ID Card Header -->
+                <div class="id-card-header">
+                  <div class="id-card-org">
+                    <img src="assets/logo-cybermedia.png" alt="SMKS Cyber Media" class="id-org-emblem" onerror="this.style.display='none'">
+                    <div>
+                      <div class="id-org-title">SMKS CYBER MEDIA</div>
+                      <div class="id-org-sub">FACULTY & TRAINER CREDENTIAL</div>
+                    </div>
+                  </div>
+                  <div class="id-card-chip" title="Smart Card Contactless Chip">
+                    <svg viewBox="0 0 34 26" width="34" height="26" class="chip-svg">
+                      <rect x="1" y="1" width="32" height="24" rx="4" fill="url(#chipGold)" stroke="#d97706" stroke-width="1"/>
+                      <path d="M1 9h10 M1 17h10 M23 9h10 M23 17h10 M11 1v24 M23 1v24 M11 13h12" stroke="#92400e" stroke-width="0.8" fill="none"/>
+                      <defs>
+                        <linearGradient id="chipGold" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="#fef3c7"/>
+                          <stop offset="50%" stop-color="#f59e0b"/>
+                          <stop offset="100%" stop-color="#d97706"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- ID Card Profile Mini -->
+                <div class="id-card-profile">
+                  <div class="id-avatar-mini">
+                    <img src="avatar.jpg" alt="Kian Tangguh Prawiraguna" class="id-avatar-img avatar-photo" onerror="this.src='assets/kian-profile.jpg';">
+                  </div>
+                  <div class="id-profile-info">
+                    <h4 class="id-profile-name">Kian Tangguh P., S.Kom., Gr.</h4>
+                    <p class="id-profile-role">Guru Produktif TJKT • Ketua BKK</p>
+                    <span class="id-verified-pill"><span class="id-pill-dot"></span>VERIFIED FACULTY ID</span>
+                  </div>
+                </div>
+
+                <!-- ID Card Technical Specs -->
+                <div class="id-card-specs">
+                  <div class="id-spec-item">
+                    <span class="id-spec-label">MIKROTIK ACADEMY TRAINER</span>
+                    <span class="id-spec-value font-mono highlight-amber">ACTR-2192</span>
+                  </div>
+                  <div class="id-spec-item">
+                    <span class="id-spec-label">TECHNICAL CERTIFICATIONS</span>
+                    <span class="id-spec-value">MikroTik MTCRE • MTCNA</span>
+                  </div>
+                  <div class="id-spec-item">
+                    <span class="id-spec-label">PENDIDIK PROFESIONAL</span>
+                    <span class="id-spec-value">Sertifikat Pendidik PPG (Gr.)</span>
+                  </div>
+                  <div class="id-spec-item">
+                    <span class="id-spec-label">REKAM JEJAK IT INDUSTRI</span>
+                    <span class="id-spec-value">Eks IT Support Digisat & Cuatrodia</span>
+                  </div>
+                </div>
+
+                <!-- ID Card Barcode & Flip Hint Footer -->
+                <div class="id-card-footer">
+                  <div class="id-barcode-wrap">
+                    <div class="id-barcode-lines" aria-hidden="true"></div>
+                    <span class="id-code font-mono">ID: 3174-ACTR-2192-KTP</span>
+                  </div>
+                  <div class="id-flip-hint">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                      <path d="M3 3v5h5"/>
+                      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                      <path d="M21 21v-5h-5"/>
+                    </svg>
+                    <span>Arahkan kursor / klik untuk membalik</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
