@@ -1911,7 +1911,17 @@ body {
   }
 
   .hero-title {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+    line-height: 1.3;
+  }
+
+  .section-subtitle {
+    font-size: 0.98rem;
   }
 
   .hero-portrait-card {
@@ -1980,6 +1990,34 @@ body {
 }
 
 @media (max-width: 480px) {
+  /* Mobile Typography Adjustments */
+  .nav-brand {
+    font-size: 1rem;
+  }
+
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+
+  .hero-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
   .hero-stats {
     flex-wrap: wrap;
     justify-content: center;
@@ -1991,12 +2029,155 @@ body {
     display: none;
   }
 
+  .btn {
+    font-size: 0.88rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+    line-height: 1.3;
+  }
+
+  .section-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .about-card h3,
+  .skill-card-title,
+  .contact-card h3 {
+    font-size: 1.08rem;
+  }
+
+  .about-card p,
+  .contact-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .bento-stat-num {
+    font-size: 1.65rem;
+  }
+
+  .bento-stat-label {
+    font-size: 0.72rem;
+  }
+
+  .tag,
+  .tech-pills span {
+    font-size: 0.72rem;
+  }
+
+  .timeline-company {
+    font-size: 1.05rem;
+  }
+
+  .timeline-role {
+    font-size: 0.85rem;
+  }
+
+  .timeline-period {
+    font-size: 0.75rem;
+  }
+
+  .story-header {
+    font-size: 0.82rem;
+  }
+
+  .story-paragraph {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .timeline-desc {
+    font-size: 0.88rem;
+  }
+
+  .timeline-achievements li {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .cert-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .cert-issuer,
+  .cert-desc {
+    font-size: 0.8rem;
+  }
+
+  .cert-verify-link {
+    font-size: 0.72rem;
+  }
+
+  .c-link {
+    font-size: 0.85rem;
+  }
+
+  /* Mobile Hero 3D Card Scaling */
   .hero-portrait-card {
     max-width: 290px;
   }
 
   .hero-portrait-inner {
     height: 360px;
+  }
+
+  .card-face-back {
+    padding: 16px 14px;
+  }
+
+  .id-avatar-mini {
+    width: 44px;
+    height: 44px;
+  }
+
+  .id-org-title {
+    font-size: 0.72rem;
+  }
+
+  .id-org-sub {
+    font-size: 0.54rem;
+  }
+
+  .id-profile-name {
+    font-size: 0.84rem;
+  }
+
+  .id-profile-role {
+    font-size: 0.64rem;
+  }
+
+  .id-verified-pill {
+    font-size: 0.56rem;
+    padding: 1px 6px;
+  }
+
+  .id-card-specs {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+
+  .id-spec-label {
+    font-size: 0.52rem;
+  }
+
+  .id-spec-value {
+    font-size: 0.72rem;
+  }
+
+  .id-code {
+    font-size: 0.58rem;
+  }
+
+  .id-flip-hint {
+    font-size: 0.58rem;
   }
 
   .badge-top-left {
