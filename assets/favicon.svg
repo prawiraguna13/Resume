@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="foldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Glow / Offset Sheet -->
+  <rect x="11" y="8" width="42" height="50" rx="6" fill="#f59e0b" opacity="0.15"/>
+  
+  <!-- Main Document Base with Folded Corner -->
+  <path d="M12 12 C12 8.686 14.686 6 18 6 L38 6 L52 20 L52 52 C52 55.314 49.314 58 46 58 L18 58 C14.686 58 12 55.314 12 52 Z" 
+        fill="url(#docGrad)" 
+        stroke="#f59e0b" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"/>
+
+  <!-- Folded Corner Triangle -->
+  <path d="M38 6 L38 18 C38 19.105 38.895 20 40 20 L52 20 Z" 
+        fill="url(#foldGrad)" 
+        stroke="#f59e0b" 
+        stroke-width="2" 
+        stroke-linejoin="round"/>
+
+  <!-- Resume Avatar Profile -->
+  <circle cx="23" cy="20" r="4.5" fill="url(#goldGrad)"/>
+  <path d="M17 31 C17 27.5 19.5 26 23 26 C26.5 26 29 27.5 29 31 Z" fill="url(#goldGrad)"/>
+
+  <!-- Resume Header Lines (Name / Role) -->
+  <rect x="33" y="18" width="13" height="3" rx="1.5" fill="#ffffff"/>
+  <rect x="33" y="24" width="9" height="2.5" rx="1.25" fill="#94a3b8"/>
+
+  <!-- Horizontal CV Experience Lines -->
+  <rect x="18" y="36" width="28" height="2.5" rx="1.25" fill="#f59e0b"/>
+  <rect x="18" y="42" width="22" height="2" rx="1" fill="#cbd5e1"/>
+  <rect x="18" y="47" width="18" height="2" rx="1" fill="#94a3b8"/>
+  
+  <!-- Mini Certified Badge in Corner -->
+  <circle cx="45" cy="46" r="3.5" fill="#10b981"/>
+  <path d="M43.5 46 L44.5 47.2 L46.5 44.8" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
