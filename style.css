@@ -589,6 +589,7 @@ body {
   -webkit-perspective: 1400px;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hero-flip-inner {
@@ -599,18 +600,49 @@ body {
   transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* 3D Flip Trigger: Hover on desktop, .is-flipped class on mobile tap */
-.hero-portrait-card:hover .hero-flip-inner,
+/* 3D Flip Trigger: .is-flipped toggled via click/tap on all devices */
 .hero-portrait-card.is-flipped .hero-flip-inner {
   transform: rotateY(180deg);
 }
 
 /* Floating badges smoothly fade out while flipped so backface is crystal clear */
-.hero-portrait-card:hover .floating-glass-badge,
 .hero-portrait-card.is-flipped .floating-glass-badge {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
+}
+
+.hero-portrait-card.is-flipped .card-face-front {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-portrait-card.is-flipped .card-face-back {
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* Hover flip ONLY on devices that support real hover (mouse/desktop) so touch devices don't get stuck */
+@media (hover: hover) and (pointer: fine) {
+  .hero-portrait-card:hover .hero-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .hero-portrait-card:hover .floating-glass-badge {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+
+  .hero-portrait-card:hover .card-face-front {
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-portrait-card:hover .card-face-back {
+    pointer-events: auto;
+    z-index: 2;
+  }
 }
 
 /* Front & Back Faces Base */

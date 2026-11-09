@@ -32,6 +32,11 @@ function initHeroFlipCard() {
     if (e.target.closest('a') || e.target.closest('button')) return;
     card.classList.toggle('is-flipped');
   });
+
+  // On desktop with mouse: reset is-flipped when cursor leaves
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('is-flipped');
+  });
 }
 
 /**
