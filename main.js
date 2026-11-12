@@ -8,7 +8,7 @@
 // =============================================================================
 const WHATSAPP_CONFIG = {
   // Format nomor: awali dengan kode negara tanpa simbol + (contoh: 6281234567890)
-  phoneNumber: '6281234567890',
+  phoneNumber: '6285155460889',
   defaultMessage: 'Halo Pak Kian Tangguh Prawiraguna! Saya telah melihat portofolio Anda dan tertarik untuk berdiskusi lebih lanjut.',
 };
 
@@ -85,12 +85,12 @@ function initWhatsAppLinks() {
   const displayElement = document.getElementById('waDisplayNumber');
   if (displayElement) {
     const raw = WHATSAPP_CONFIG.phoneNumber;
-    // Format 6281234567890 -> +62 812-3456-7890
+    // Format 6285155460889 -> 0851-5546-0889
     if (raw.startsWith('62')) {
-      const formatted = `+62 ${raw.slice(2, 5)}-${raw.slice(5, 9)}-${raw.slice(9)}`;
+      const formatted = `0${raw.slice(2, 5)}-${raw.slice(5, 9)}-${raw.slice(9)}`;
       displayElement.textContent = formatted;
     } else {
-      displayElement.textContent = `+${raw}`;
+      displayElement.textContent = raw;
     }
   }
 }
