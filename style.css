@@ -517,6 +517,7 @@ body {
   font-weight: 800;
   font-family: var(--font-mono);
   color: var(--accent-primary);
+  white-space: nowrap;
 }
 
 .stat-label {
@@ -2154,7 +2155,7 @@ body {
   }
 
   .stat-number {
-    font-size: 1.18rem;
+    font-size: 1.12rem;
   }
 
   .stat-label {
