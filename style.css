@@ -136,37 +136,6 @@ body {
   background: radial-gradient(circle at center, transparent 45%, rgba(195, 160, 120, 0.15) 100%);
 }
 
-/* Ambient Parallax Floaters for Light Mode */
-[data-theme="light"] .ambient-spotlight::before,
-[data-theme="light"] .ambient-spotlight::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(80px);
-  will-change: transform;
-}
-
-[data-theme="light"] .ambient-spotlight::before {
-  top: 8%;
-  left: 6%;
-  width: 440px;
-  height: 440px;
-  background: radial-gradient(circle, rgba(251, 191, 36, 0.22) 0%, rgba(245, 158, 11, 0.08) 60%, transparent 75%);
-  transform: translate3d(calc(var(--mouse-px, 0) * -38px), calc(var(--mouse-py, 0) * -32px), 0);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-[data-theme="light"] .ambient-spotlight::after {
-  bottom: 12%;
-  right: 8%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.06) 60%, transparent 75%);
-  transform: translate3d(calc(var(--mouse-px, 0) * 42px), calc(var(--mouse-py, 0) * 36px), 0);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
 /* Layout Utilities */
 .container {
   width: 100%;
@@ -680,25 +649,6 @@ body {
   .hero-portrait-card:hover .card-face-back {
     pointer-events: auto;
     z-index: 2;
-  }
-
-  /* Subtle, elegant Hero Parallax in Light Mode */
-  [data-theme="light"] .hero-content {
-    transform: translate3d(calc(var(--mouse-px, 0) * -7px), calc(var(--mouse-py, 0) * -5px), 0);
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
-  }
-
-  [data-theme="light"] .hero-showcase {
-    transform: translate3d(calc(var(--mouse-px, 0) * 8px), calc(var(--mouse-py, 0) * 6px), 0);
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
-  }
-
-  [data-theme="light"] .floating-glass-badge .badge-icon-wrap {
-    transform: translate3d(calc(var(--mouse-px, 0) * 5px), calc(var(--mouse-py, 0) * 4px), 0);
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform;
   }
 }
 
