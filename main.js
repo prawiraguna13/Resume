@@ -151,6 +151,12 @@ function initSpotlightFollower() {
 
     spotlight.style.background = `radial-gradient(circle 750px at ${currentX.toFixed(1)}px ${currentY.toFixed(1)}px, ${core} 0%, ${warm} 35%, ${sec} 65%, transparent 100%)`;
 
+    // Normalized mouse coordinates (-1 to 1) for lightweight GPU-accelerated parallax in light mode
+    const px = (((currentX / window.innerWidth) - 0.5) * 2).toFixed(3);
+    const py = (((currentY / window.innerHeight) - 0.5) * 2).toFixed(3);
+    document.documentElement.style.setProperty('--mouse-px', px);
+    document.documentElement.style.setProperty('--mouse-py', py);
+
     if (Math.abs(mouseX - currentX) > 0.5 || Math.abs(mouseY - currentY) > 0.5) {
       requestAnimationFrame(updateSpotlight);
     } else {
