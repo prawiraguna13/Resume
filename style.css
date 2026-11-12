@@ -1852,8 +1852,8 @@ body {
 .btn-macos-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
 .btn-macos-text .btn-title {
