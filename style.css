@@ -1793,8 +1793,21 @@ body {
 }
 
 .cert-id {
-  color: var(--text-muted);
-  font-weight: 600;
+  color: var(--accent-primary);
+  background: var(--accent-dim);
+  border: 1px solid rgba(245, 158, 11, 0.32);
+  box-shadow: 0 0 10px var(--accent-glow);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  transition: all var(--transition);
+}
+
+[data-theme="light"] .cert-id {
+  border-color: rgba(217, 119, 6, 0.32);
 }
 
 /* ==========================================================================
@@ -2509,6 +2522,13 @@ body {
   .cert-footer {
     padding-top: 0.55rem;
     font-size: 0.72rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .cert-id {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.5rem;
   }
 
   /* Contact Section */
