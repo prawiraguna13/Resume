@@ -46,38 +46,38 @@
   --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Light Theme Variables */
+/* Light Theme Variables (Warm Cream & Amber Studio Aesthetic) */
 [data-theme="light"] {
-  --bg-primary: #faf8f5;
-  --bg-surface: #ffffff;
-  --bg-surface-elevated: #f4efe6;
-  --bg-surface-alt: #f5f1e8;
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(217, 119, 6, 0.35);
+  --bg-primary: #faf6f0;
+  --bg-surface: #fffdf9;
+  --bg-surface-elevated: #f4ede1;
+  --bg-surface-alt: #f5eee2;
+  --border-subtle: rgba(180, 130, 75, 0.16);
+  --border-hover: rgba(217, 119, 6, 0.45);
   
-  --text-primary: #18181b;
-  --text-secondary: #52525b;
-  --text-muted: #71717a;
+  --text-primary: #281d15;
+  --text-secondary: #6e5849;
+  --text-muted: #998575;
   
   --accent-primary: #d97706;
   --accent-light: #b45309;
   --accent-dim: rgba(217, 119, 6, 0.12);
-  --accent-glow: rgba(217, 119, 6, 0.2);
+  --accent-glow: rgba(217, 119, 6, 0.22);
   
   /* Warm diffused spotlight in light mode */
-  --spotlight-warm: rgba(245, 158, 11, 0.10);
-  --spotlight-secondary: rgba(251, 191, 36, 0.05);
-  --spotlight-core: rgba(255, 225, 160, 0.2);
+  --spotlight-warm: rgba(245, 158, 11, 0.13);
+  --spotlight-secondary: rgba(251, 191, 36, 0.07);
+  --spotlight-core: rgba(255, 214, 153, 0.28);
   
-  /* MacBook Glassmorphism (Light) */
-  --glass-bg: rgba(255, 255, 255, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.8);
+  /* MacBook Glassmorphism (Warm Light) */
+  --glass-bg: rgba(255, 253, 248, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.85);
   --glass-border-highlight: rgba(255, 255, 255, 0.95);
-  --glass-shadow: 0 10px 25px rgba(180, 83, 9, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --glass-shadow: 0 10px 25px rgba(180, 83, 9, 0.10), 0 2px 8px rgba(120, 70, 20, 0.05);
   --glass-glow-wa: rgba(37, 211, 102, 0.22);
   
-  --badge-bg: #f8f6f0;
-  --badge-border: rgba(217, 119, 6, 0.3);
+  --badge-bg: #fbf6ef;
+  --badge-border: rgba(217, 119, 6, 0.32);
 }
 
 /* Global Reset */
@@ -133,7 +133,7 @@ body {
 }
 
 [data-theme="light"] .ambient-vignette {
-  background: radial-gradient(circle at center, transparent 50%, rgba(200, 180, 150, 0.12) 100%);
+  background: radial-gradient(circle at center, transparent 45%, rgba(195, 160, 120, 0.15) 100%);
 }
 
 /* Layout Utilities */
@@ -174,7 +174,8 @@ body {
 }
 
 [data-theme="light"] .navbar {
-  background: rgba(250, 248, 245, 0.82);
+  background: rgba(250, 246, 240, 0.85);
+  border-bottom-color: rgba(180, 130, 75, 0.16);
 }
 
 .nav-container {
@@ -323,13 +324,14 @@ body {
 [data-theme="light"] .btn-macos-glass {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.85) 0%,
-    rgba(255, 255, 255, 0.5) 100%
+    rgba(255, 253, 248, 0.9) 0%,
+    rgba(247, 240, 230, 0.7) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  color: #281d15;
   box-shadow: 
     inset 0 1px 2px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 2px 0 rgba(0, 0, 0, 0.05),
+    inset 0 -1px 2px 0 rgba(180, 130, 75, 0.08),
     var(--glass-shadow);
 }
 
@@ -352,7 +354,7 @@ body {
 }
 
 [data-theme="light"] .btn-macos-glass:hover {
-  color: #111827;
+  color: #281d15;
   border-color: rgba(37, 211, 102, 0.6);
   box-shadow: 
     inset 0 1px 2px 0 rgba(255, 255, 255, 1),
@@ -502,9 +504,9 @@ body {
 }
 
 [data-theme="light"] .hero-stats {
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(245, 158, 11, 0.22);
-  box-shadow: 0 10px 25px -10px rgba(180, 83, 9, 0.15);
+  background: rgba(255, 253, 248, 0.85);
+  border: 1px solid rgba(217, 119, 6, 0.28);
+  box-shadow: 0 10px 25px -10px rgba(180, 83, 9, 0.14);
 }
 
 .stat-item {
@@ -677,10 +679,10 @@ body {
 }
 
 [data-theme="light"] .card-face-front {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.88) 0%, rgba(250, 245, 235, 0.65) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.28);
+  background: linear-gradient(145deg, rgba(255, 253, 249, 0.95) 0%, rgba(247, 240, 228, 0.85) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.32);
   box-shadow: 
-    0 25px 50px -12px rgba(180, 83, 9, 0.22),
+    0 25px 50px -12px rgba(180, 83, 9, 0.20),
     0 0 30px rgba(245, 158, 11, 0.15),
     inset 0 1px 2px rgba(255, 255, 255, 0.95);
 }
@@ -708,8 +710,8 @@ body {
 }
 
 [data-theme="light"] .card-face-back {
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0.97) 0%, rgba(248, 244, 236, 0.95) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.38);
+  background: linear-gradient(150deg, rgba(255, 253, 249, 0.98) 0%, rgba(246, 238, 226, 0.96) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.38);
   box-shadow: 
     0 25px 50px -12px rgba(180, 83, 9, 0.22),
     0 0 35px rgba(245, 158, 11, 0.15),
@@ -745,11 +747,11 @@ body {
 }
 
 [data-theme="light"] .flip-hint-pill {
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(245, 158, 11, 0.45);
-  color: #0f172a;
+  background: rgba(255, 253, 249, 0.95);
+  border: 1px solid rgba(217, 119, 6, 0.45);
+  color: #281d15;
   box-shadow: 
-    0 6px 20px rgba(180, 83, 9, 0.2),
+    0 6px 20px rgba(180, 83, 9, 0.18),
     0 0 14px rgba(245, 158, 11, 0.18);
 }
 
@@ -1051,10 +1053,10 @@ body {
 }
 
 [data-theme="light"] .floating-glass-badge {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(245, 158, 11, 0.25);
+  background: rgba(255, 253, 248, 0.94);
+  border: 1px solid rgba(217, 119, 6, 0.28);
   box-shadow: 
-    0 14px 30px -8px rgba(180, 83, 9, 0.18),
+    0 14px 30px -8px rgba(180, 83, 9, 0.14),
     0 0 0 1px rgba(255, 255, 255, 0.95),
     inset 0 1px 2px #fff;
 }
@@ -1822,6 +1824,17 @@ body {
   max-width: 850px;
   margin: 0 auto;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="light"] .about-card:hover,
+[data-theme="light"] .timeline-content:hover,
+[data-theme="light"] .skill-category-card:hover,
+[data-theme="light"] .cert-card:hover {
+  box-shadow: 0 16px 32px -8px rgba(180, 83, 9, 0.14), 0 0 20px var(--accent-glow);
+}
+
+[data-theme="light"] .contact-card {
+  box-shadow: 0 20px 45px -10px rgba(180, 83, 9, 0.12);
 }
 
 .contact-action-wrapper {
